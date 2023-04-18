@@ -304,7 +304,6 @@ path{
     background-color: #111;
     padding: 100px 0px;
 }
-
 #page4>button{
     background-image: url(https://bowndsranches.com/textures/buttonBg.svg);
     padding: 10px 20px;
@@ -314,14 +313,14 @@ path{
     text-transform: uppercase;
     font-size: 17px;
     z-index: 99;
-    transition: all linear 0.4s;
+    
 }
 #page4>img{
-    height: 400px;
+    height: 300px;
     position: absolute;
-    transition: all linear 0.4s;
-    width: 300px;
-
+    width: 250px;
+    z-index: 9;
+    /* transition: all ease 0.1s; */
 
 }
 
@@ -364,6 +363,7 @@ path{
     top: 0;
     transition: opacity ease 0.1s;
     opacity: 0;
+    z-index: 10;
 }
 #moving-text h2{
     display: inline-block;
@@ -385,6 +385,7 @@ path{
     right: 3%;
     position: absolute;
     top: 50%;
+    /* transition: all ease 0.1s; */
     transform: translate(0,-50%);
 
 }
@@ -402,4 +403,42 @@ path{
     100%{
         transform: translateX(-100%);
     }
+}
+
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page5-div1{
+    height: 400px;
+    width: 600px;
+    position: absolute;
+    background-size: cover;
+    transition: all ease 2s;
+
+    background-position: center;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/336838d48da46ea806426b4185e7f8a87262a6a5-1521x974.png/image.png?rect=1,0,1520,974&bg=F2F1EC&w=1024&h=656&auto=format);
+}
+#page5-div2{
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 600px;
+    rotate:-5deg;
+    position: absolute;
+    background-image: url(https://cdn.sanity.io/images/sjvffa0f/production/ac5d899c94acdca5124d1fcfb738940892e29544-1520x973.png/image.png?rect=0,1,1520,972&bg=F2F1EC&w=1024&h=655&auto=format);
+}
+#page6{
+    min-height: 100vh;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

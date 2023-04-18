@@ -138,7 +138,51 @@ gsap.to("#nav",{
     }
 })
 
-document.querySelector("#page3").addEventListener("mousemove",function(dets){
+document.querySelector("#page3").addEventListener("mousemove", function (dets) {
     document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
     document.querySelector("#page3 #img-div").style.top = `${dets.y}px`
+})
+
+document.querySelector("#page4").addEventListener("mousemove", function (dets) {
+    document.querySelector("#page4>img").style.left = (dets.x-30) + "px"
+    document.querySelector("#page4>img").style.top = (dets.y-10) + "px"
+    document.querySelector("#page4>button").style.left = (dets.x + 10) + "px"
+    document.querySelector("#page4>button").style.top = (dets.y + 200) + "px"
+})
+
+var elem = document.querySelectorAll(".elem")
+elem.forEach(function(e){
+    var a = e.getAttribute("data-img")
+    e.addEventListener("mouseenter",function(){
+        document.querySelector("#page4>img").setAttribute("src",a)
+    })
+})
+
+
+gsap.to("#page5-div1",{
+    rotate:5,
+
+    scrollTrigger:{
+        trigger:"#page5-div1",
+        scroller:"#main",
+        start:"top 50%",
+        end:"top 25%",
+        markers:true,
+        pin:true,
+    }
+
+})
+gsap.from("#page5-div2",{
+    rotate:15,
+
+    duration:20,
+    delay:2,
+    scrollTrigger:{
+        trigger:"#page5-div2",
+        scroller:"#main",
+        start:"top 130%",
+        end:"top 50%",
+        markers:true,
+
+    },
 })
