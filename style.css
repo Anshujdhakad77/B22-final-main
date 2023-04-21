@@ -545,7 +545,7 @@ path{
 
 
 #page5{
-    min-height: 160vh;
+    min-height: 140vh;
     width: 100%;
     padding: 2px;
     display: flex;
@@ -586,7 +586,7 @@ path{
     align-items: center;
     text-align: center;
     left: 50%;
-    top: 70%;
+    top: 115%;
     width: 80%;
     color: #fff;
     opacity: .85;
@@ -602,7 +602,7 @@ path{
     align-items: center;
     text-align: center;
     left: 50%;
-    top: 89%;
+    top: 135%;
     width: 30%;
     color: #fff;
     opacity: .85;
@@ -614,6 +614,7 @@ path{
     width: 100%;
     padding: 2px;
     position: relative;
+    background-color: #111;
 }
 #page6 img{
     width: 100%;

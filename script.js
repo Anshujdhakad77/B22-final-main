@@ -113,12 +113,20 @@ gsap.from("#page1 h1",{
     }
 })
 
-gsap.from("#page2 h1",{
-    duration:0.5,
-    onStart:function(){
-        $('#page2 h1').textillate({ in: { effect: 'fadeInUp' } });
+
+gsap.from("#page2 h1", {
+    duration: 0.5,
+    onStart: function () {
+        $('#page2 h1').textillate({ in: { effect: 'fadeInUp',   delayScale: 0.5, } });
+    },
+    scrollTrigger:{
+        trigger:"#page2 h1",
+        scroller:"#main",
+        start:"top 80%",
+        scrub:2
     }
 })
+
 
 
 
@@ -171,6 +179,17 @@ tl2.to("#nav", {
     background: "linear-gradient(#000000d5,#00000089,#00000000)",
 })
 
+gsap.to("#page5",{
+    scrollTrigger:{
+        trigger:"#page5",
+        scroller:"#main",
+        start:"top 0%",
+        end:"top -100%",
+        scrub:true,
+        pin:true,
+        markers:true
+    }
+})
 
 
 gsap.from("#page5-div1",{
@@ -184,14 +203,27 @@ gsap.from("#page5-div1",{
         scrub:1
     }
 })
+
+
 gsap.from("#page5-div2",{
-    y:400,
+    y:600,
     scrollTrigger:{
         trigger:"#page5-div2",
         scroller:"#main",
-        start:"top 85%",
-        end:"top 82%",
-        markers:true,
-        scrub:1
+        start:"top 80%",
+        end:"top 50%",
+        scrub:2,
+        markers:true
     }
 })
+// gsap.from("#page5-div2",{
+//     y:400,
+//     scrollTrigger:{
+//         trigger:"#page5-div2",
+//         scroller:"#main",
+//         start:"top 85%",
+//         end:"top 82%",
+//         markers:true,
+//         scrub:1
+//     }
+// })
