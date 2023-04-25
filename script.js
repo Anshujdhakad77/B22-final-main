@@ -9,7 +9,11 @@ function init() {
     });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
-
+    locoScroll.on("resize",function(){
+        location.reload()
+        locoScroll.update()
+    })
+    
     // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
     ScrollTrigger.scrollerProxy("#main", {
         scrollTop(value) {
@@ -41,6 +45,7 @@ function init() {
 }
 
 init()
+
 
 document.querySelector("#page3").addEventListener("mousemove", function (dets) {
     document.querySelector("#page3 #img-div").style.left = `${dets.x}px`
@@ -225,5 +230,17 @@ gsap.from("#page5-div2",{
 //         end:"top 82%",
 //         markers:true,
 //         scrub:1
+//     }
+// })
+
+
+
+
+
+// window.addEventListener("resize", function () {
+//     var abc = document.querySelector("#main")
+//     console.log()
+//     if(abc.getBoundingClientRect().width>600){
+//         console.log("hyeloenheye")
 //     }
 // })
